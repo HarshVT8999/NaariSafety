@@ -1,2 +1,3 @@
 # NaariSafety
-Web App for women safety
+
+Developing a Web App for women safety.
