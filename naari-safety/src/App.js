@@ -1,31 +1,35 @@
-import './App.css';
+import React, { useState } from "react";
+import LoginForm from "./components/LoginForm";
 function App() {
-  return (
-    <div className="App">
-      <div className='loginbox'>
-        <form>
-        <h3>Login Here</h3>
-        <label for="email">Username</label>
-        <input
-          className="email"
-          type="text"
-          placeholder='Email or Phone'
-        />
-        <label for="pass">Password</label>
-        <input
-          className="pass"
-          type="password"
-          placeholder='Password'
-        />
-        <button className="btn">Log In</button>
-        <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Google</div>
-          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
-        </div>
-        </form>
+  const adminUser = {
+    email: "admin@admin.com",
+    password: "admin123"
+}
+
+const [user, setUser] = useState({name: "", email: ""});
+const [error, setError] = useState("");
+
+const Login = details => {
+    console.log(details);
+}
+
+const Logout = () => {
+    console.log("Logout");
+}
+  
+return(
+  <div className='App'>
+    {(user.email != "") ? (
+      <div className='welcome'>
+           <h2>Welcome, <span>{user.name}</span></h2>
+           <button>Logout</button> 
       </div>
-    </div>
-  );
+    ) : (
+      <LoginForm Login={Login} error={error}/>
+    )}
+
+  </div>
+)
 }
 
 export default App;
