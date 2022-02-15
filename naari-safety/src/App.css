@@ -79,7 +79,6 @@ form h3{
     font-size: 18px;
     font-weight: 600;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 .social{
@@ -91,17 +90,18 @@ form h3{
   width: 150px;
   border-radius: 3px;
   padding: 5px 10px 10px 5px;
-  background-color: rgba(255,255,255,0.27);
+  background-color: #DB4437;
   color: #eaf0fb;
   text-align: center;
+  cursor:pointer;
+  margin-left: 27%;
 }
-.social div:hover{
-  background-color: rgba(255,255,255,0.47);
-}
-.social .fb{
-  margin-left: 25px;
-}
-.social i{
-  margin-right: 4px;
+.social .google{
+  background-color:#DB4437;
+  border: none;
+  margin-top: 7px;
+  text-align: center;
+  font-weight: bold;
+  font-size: medium;
 }
 
